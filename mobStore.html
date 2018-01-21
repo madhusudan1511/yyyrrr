@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Medium Assignment1</title>
+  <link href="mobStore.css" rel="stylesheet" type="text/css">
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link href="Content/bootstrap.css" rel="stylesheet" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script language="javascript" type="text/javascript" src="mobStore.js"></script>
+<script type='text/javascript' src="/sites/all/themes/bootstrap_subtheme/js/css3-mediaqueries.js"></script> 
+ <script type='text/javascript' src="/sites/all/themes/bootstrap_subtheme/js/html5.js"></script>
+ <script type='text/javascript' src="/sites/all/themes/bootstrap_subtheme/js/respond.min.js"></script>
+</head>
+<body>
+  
+
+
+    <header class="container-fluid bg-4 text-left">
+        <h3>ACME Mobile Store</h3> 
+    </header>
+    <br/>
+    
+
+   <div class="container-fluid">
+     
+    <div class="row">
+     <div class="col-md-2" >
+       <div class="panel panel-default">
+         <div class="panel-body">
+            <h4><b>Manufacturer</b></h4>
+            <form id="manuf">
+             <div class="checkbox" >
+                 <label><input type="checkbox" id="apple"  onchange="checkm()"/>Apple</label>
+             </div>
+            <div class="checkbox">
+                 <label><input type="checkbox" id="samsung" onchange="checkm()"/>Samsung</label>
+            </div>
+            <div class="checkbox">
+                <label><input type="checkbox" id="htc" onchange="checkm()"/>HTC</label>
+            </div>
+             <div class="checkbox">
+                <label><input type="checkbox" id="nokia" onchange="checkm()"/>Nokia</label>
+            </div>
+             <div class="checkbox">
+                <label><input type="checkbox" id="sony" onchange="checkm()"/>Sony</label>
+            </div>
+          </form>
+
+          <br/>
+
+          <h4><b>Storage Size</b></h4>
+          <form id="strg">
+             <div class="checkbox">
+                 <label><input type="checkbox" id="six" onchange="checks()">16 GB</label>
+             </div>
+            <div class="checkbox">
+                 <label><input type="checkbox" id="thr" onchange="checks()">32 GB</label>
+            </div>
+          </form>
+
+          <br/>
+
+          <h4><b>OS</b></h4>
+          <form id="os">
+             <div class="checkbox">
+                 <label><input type="checkbox" id="and" onchange="checks()">Android</label>
+             </div>
+            <div class="checkbox">
+                 <label><input type="checkbox" id="io" onchange="checks()">IOS</label>
+            </div>
+            <div class="checkbox">
+                 <label><input type="checkbox" id="win" onchange="checks()">Windows</label>
+             </div>
+          </form>
+          <button type="button" class="btn btn-success" >Clear Filters</button>
+
+          </div>
+        </div>
+      </div>
+
+     <div class="col-md-1" ></div>
+
+    <div class="col-md-2" >
+       
+        <div class="panel panel-default">
+         <div class="panel-body" id="ipn1">
+          <img src="iphone6.jpg" >
+            <p><b>Iphone 6</p>
+            <p  style="font-size:90%;">Manufacturer:Apple<br/>Storage:16GB, OS:IOS<br/>Camera:5Mp</p>
+            <p class="text-right"><b>Rs.43000</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal">View Details</button>
+			<div class="modal fade" id="myModal" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Iphone 6</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="iphone6.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:Apple<br/>Storage:16GB, OS:IOS<br/>Camera:5Mp</p>
+					<p style="text-align:center"><b>Rs.43000</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+         <div class="panel-body" id="ipn2">
+          <img src="iphone5.jpg" >
+            <p><b>Iphone 5</b></p>
+            <p  style="font-size:90%;">Manufacturer:Apple<br/>Storage:32GB, OS:IOS<br/>Camera:5Mp</p>
+            <p class="text-right"><b>Rs.23000</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal1">View Details</button>
+			<div class="modal fade" id="myModal1" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Iphone 5</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="iphone5.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:Apple<br/>Storage:32GB, OS:IOS<br/>Camera:5Mp</p>
+					<p style="text-align:center"><b>Rs.23000</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+          </div>
+        </div>
+         <div class="panel panel-default">
+         <div class="panel-body" id="nokia1">
+          <img src="lumia1320.jpg" style="width:80%" >
+            <p><b>Lumia 920</b></p>
+            <p  style="font-size:90%;">Manufacturer:Nokia<br/>Storage:16GB, OS:Windows<br/>Camera:16Mp</p>
+            <p class="text-right"><b>Rs.15550</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal2">View Details</button>
+			<div class="modal fade" id="myModal2" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Lumia 920</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="lumia1320.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:Nokia<br/>Storage:16GB, OS:Windows<br/>Camera:16Mp</p>
+					<p style="text-align:center"><b>Rs.15550</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+          </div>
+        </div>
+     </div>
+
+
+     <div class="col-md-2" >
+       
+        <div class="panel panel-default">
+         <div class="panel-body" id="htc1">
+          <img src="htc1x9.jpg"  >
+            <p><b>HTC one X9</p>
+            <p  style="font-size:90%;">Manufacturer:HTC<br/>Storage:16GB, OS:Android<br/>Camera:12Mp</p>
+            <p class="text-right"><b>Rs.13000</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal8">View Details</button>
+			<div class="modal fade" id="myModal8" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">HTC one X9</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="htc1x9.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:HTC<br/>Storage:16GB, OS:Android<br/>Camera:12Mp</p>
+					<p style="text-align:center"><b>Rs.13000</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+          </div>
+        </div>
+        <div class="panel panel-default">
+         <div class="panel-body" id="htc2">
+          <img src="htcD620.jpg"  >
+            <p><b>HTC Desire 620</b></p>
+            <p  style="font-size:90%;">Manufacturer:HTC<br/>Storage:32GB, OS:Android<br/>Camera:8Mp</p>
+            <p class="text-right"><b>Rs.15000</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal9">View Details</button>
+			<div class="modal fade" id="myModal9" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">HTC Desire 620</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="htcD620.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:HTC<br/>Storage:32GB, OS:Android<br/>Camera:8Mp</p>
+					<p style="text-align:center"><b>Rs.15000</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+          </div>
+        </div>
+         <div class="panel panel-default">
+         <div class="panel-body" id="nokia2">
+          <img src="lumia535.jpg" style="width:80%" >
+            <p><b>Lumia 535</b></p>
+            <p  style="font-size:90%;">Manufacturer:Nokia<br/>Storage:32GB, OS:Windows<br/>Camera:16Mp</p>
+            <p class="text-right"><b>Rs.17550</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal3">View Details</button>
+			<div class="modal fade" id="myModal3" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Lumia 535</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="lumia535.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:Nokia<br/>Storage:32GB, OS:Windows<br/>Camera:16Mp</p>
+					<p style="text-align:center"><b>Rs.17550</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+          </div>
+        </div>
+     </div>
+
+     <div class="col-md-2" >
+       <div class="panel panel-default" style="word-wrap: break-word;height:fixed;">
+         <div class="panel-body" id="sam1">
+           <img src="samsungGj7.jpg"  >
+            <p><b>Samsung Galaxy J7</b></p>
+            <p  style="font-size:90%;">Manufacturer: Samsung<br/>Storage:16GB, OS:Android<br/>Camera:12Mp</p>
+            <p class="text-right"><b>Rs.12000</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal4">View Details</button>
+			<div class="modal fade" id="myModal4" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Samsung Galaxy J7</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="samsungGj7.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:Samsung<br/>Storage:16GB, OS:Android<br/>Camera:12Mp</p>
+					<p style="text-align:center"><b>Rs.12000</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+          </div>
+        </div>
+        <div class="panel panel-default" style="word-wrap: break-word;height:fixed;" >
+         <div class="panel-body" id="sam2">
+          <img src="samsungOn7.jpg"  >
+            <p><b>Samsung On7</p>
+            <p  style="font-size:90%;">Manufacturer: Samsung<br/>Storage:32GB, OS:Android<br/>Camera:16Mp</p>
+            <p class="text-right"><b>Rs.15250</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal5">View Details</button>
+			<div class="modal fade" id="myModal5" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Samsung On7</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="samsungOn7.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:Samsung<br/>Storage:32GB, OS:Android<br/>Camera:16Mp</p>
+					<p style="text-align:center"><b>Rs.15250</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+          </div>
+        </div>
+        
+      </div>
+
+     <div class="col-md-2" >
+       <div class="panel panel-default ">
+         <div class="panel-body" id="sony1">
+            <img src="sonyXR1.jpg" >
+            <p><b>Sony Xperia1</b></p>
+            <p  style="font-size:90%;">Manufacturer:Sony<br/>Storage:16GB, OS:Android<br/>Camera:12Mp</p>
+            <p class="text-right"><b>Rs.14250</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal6">View Details</button>
+			<div class="modal fade" id="myModal6" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Sony Xperia 1</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="sonyXR1.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:Sony<br/>Storage:16GB, OS:Android<br/>Camera:12Mp</p>
+					<p style="text-align:center"><b>Rs.14250</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+           </div>
+        </div>
+        <div class="panel panel-default">
+         <div class="panel-body" id="sony2">
+            <img src="sonyz3.jpg">
+            <p><b>Sony Z3</p>
+            <p  style="font-size:90%;">Manufacturer:Sony<br/>Storage:32GB, OS:Android<br/>Camera:16Mp</p>
+            <p class="text-right"><b>Rs.16250</b></p>
+			<button type="button" Style="padding: 1px 3px;float:left"class="btn btn-info btn-lg" data-toggle="modal" data-target="#myModal7">View Details</button>
+			<div class="modal fade" id="myModal7" role="dialog">
+			<div class="modal-dialog">
+    
+			<!-- Modal content-->
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal">&times;</button>
+					<h4 class="modal-title">Sony Z3</h4>
+				</div>
+				<div class="modal-body">
+				 <img src="sonyz3.jpg" Style="margin: auto;display: block;">
+					<br/>
+					<p  style="font-size:90%;text-align:center">Manufacturer:Sony<br/>Storage:32GB, OS:Android<br/>Camera:16Mp</p>
+					<p style="text-align:center"><b>Rs.16250</b></p>
+				</div>
+			</div>
+			</div>
+		</div>
+          </div>
+        </div>
+        
+    </div>
+  </div>
+ </div>
+
+</body>
+</html>
